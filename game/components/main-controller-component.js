@@ -21,6 +21,7 @@ export default class MainControllerComponent extends Engine.Component {
     this.wave4Check = false;
     this.wave5Check = false;
     this.wave6Check = false;
+    this.waveNumber = 0;
   }
 
   update() {
@@ -64,7 +65,7 @@ export default class MainControllerComponent extends Engine.Component {
 
     }
 
-    this.waveNumber = 0;
+
     this.waveText = Engine.SceneManager.currentScene.getGameObject("ScreenTextWave").getComponent("ScreenTextComponent")
 
     if(Input.getKey(' ') & !this.wave1Check)
